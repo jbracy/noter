@@ -1,0 +1,6 @@
+h1, h2, h3, h4, h5, h6 { font-family: "Helvetica Neue", Helvetica, Tahoma, sans-serif; color: #000; font-weight: bold; }
+
+a, a:link, p, .post, ul, ol, dl, dd, li { font-family: Tahoma, "Helvetica Neue", Helvetica, sans-serif; letter-spacing: 0.2px; }
+a, a:link { color: #ff6900; text-decoration: none; }
+p { padding: 0 0 15px 0; }
+code { display: block; white-space: pre; background-color: #fbfbfd; border: 1px solid #dae0e4; font-size: 11px; color: #7d7d7d; margin: 10px 4px; overflow: auto; padding: 8px; font-family: Consolas, "Courier new", monospace; }

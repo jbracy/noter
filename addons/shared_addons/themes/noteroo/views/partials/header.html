@@ -1,0 +1,67 @@
+<!-- Begin header -->
+<header>
+	<!-- Begin logo -->
+	<div id="logo">
+		<h1><a href="{{ url:site  }}" title="Home"><img src="assets/images/logo.png" /></a></h1>
+		<h2>{{ settings:site_slogan }}</h2>
+	</div>
+	<!-- End logo -->
+	
+	<!-- Begin nav -->
+	<nav>
+		<ul id="head-nav">
+		{{ navigation:links group="header" }}
+		</ul>
+		<ul id="head-sec-nav">
+			{{ if user:logged_in }}
+
+				{{ if settings:enable_profiles }}
+				<li><a href="{{ url:site uri='edit-profile' }}">My Profile</a></li>
+				{{ endif }}
+				
+				<li>|</li>
+				<li><a href="{{ url:site uri='connections' }}">My Connections</a></li>
+
+				{{ if user:has_cp_permissions }}
+				<li>|</li>
+				<li><a href="{{ url:site uri='admin' }}" target="_blank">{{ helper:lang line="global:control-panel" }}</a></li>
+				{{ endif }}
+
+				<li>|</li>
+				<li><a href="{{ url:site uri='users/logout' }}">{{ helper:lang line="logout_label" }}</a></li>
+
+			{{ else }}
+				<li><a href="{{ url:site }}register">Try it now</a></li>
+				<li>|</li>
+				<li><a href="{{ url:site }}users/login">Sign in</a></li>
+			{{ endif }}
+		</ul>
+	</nav>
+	<!-- End nav -->
+</header>
+<!-- End header -->
+<!-- Begin Top Content -->
+<div id="header-bar">
+	<!-- Begin top half -->
+	<div id="header-bar-top">
+		<div id="hbt-content">
+			{{ snippet:top_header }}
+		</div>
+	</div>
+	<!-- End top half -->
+	<!-- Begin bottom half -->
+	<div id="header-bar-bottom">
+		<div id="hbb-content">
+			{{ snippet:bottom_header }}
+			{{ if user:logged_in }}
+				<ul id="profile_nav" class="horizontal">
+					<li><a href="{{ url:site uri='edit-profile' }}">My Profile</a></li>
+					<li><a href="{{ url:site uri='connections' }}">My Connections</a></li>
+					<li><a href="{{ url:site uri='question_streams' }}">My Questions</a></li>
+				</ul>
+			{{ endif }}
+		</div>
+	</div>
+	<!-- End bottom half -->
+</div>
+<!-- End Top Content -->

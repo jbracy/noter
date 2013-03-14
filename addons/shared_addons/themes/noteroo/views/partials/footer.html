@@ -1,0 +1,44 @@
+<!-- Begin Ad space -->
+<div id="ad_bottom">
+</div>
+<!-- end ad space -->
+
+<!-- Begin footer -->
+<footer>
+	<div id="top-footer-wrapper">
+		<div id="top-footer">
+			<ul id="foot-nav">
+				{{ navigation:links group="header" }}
+			</ul>
+		</div>
+	</div>
+	<div id="bottom-footer">
+		<p style="font-size:18px;">&nbsp;{{ settings:site_name }}</p>
+		<ul id="foot-nav">
+			<span>
+			<li><a href="">Terms of Use</a></li>
+			<li><a href="">Privacy</a></li>
+			<li class="last"><a href=""><img src="assets/images/facebook.png" /> Like us on Facebook</a></li>
+			</span>
+			<span style="float:right;">
+			<li><a href="">Sitemap</a></li>
+			<li><a href="">Contact</a></li>
+			<li><a href="">Advertise</a> </li>
+			<li class="last"><a href="">Blog</a></li><br />
+			</span><br />
+			<span style="float:left;">
+			<li class="last">&copy; {{ helper:date format="Y" }} {{ settings:site_name }}. All Rights Reserved</li></span>
+		</ul>
+	</div>
+</footer>
+<!-- End footer -->
+<!-- Begin scripts -->
+{{ theme:js file="localscroll.js" }}
+{{ theme:js file="scrollto.js" }}
+{{ theme:js file="easing.js" }}
+{{ theme:js file="global.js" }}
+<!-- End scripts -->
+
+{{ if theme:options:cufon_enabled == 'yes' and settings:theme_default:cufon_enabled }}
+	<script type="text/javascript">Cufon.now();</script>
+{{ endif }}
